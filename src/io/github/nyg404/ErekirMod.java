@@ -1,11 +1,9 @@
-package example;
+package io.github.nyg404;
 
 import arc.*;
 import arc.util.*;
-import mindustry.*;
-import mindustry.content.*;
+import io.github.nyg404.content.EkeriBlocks;
 import mindustry.game.EventType.*;
-import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
@@ -30,6 +28,7 @@ public class ExampleJavaMod extends Mod{
 
     @Override
     public void loadContent(){
+        EkeriBlocks.load();
         Log.info("Loading some example content.");
     }
 

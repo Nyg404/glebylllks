@@ -7,7 +7,7 @@ import mindustry.world.Block;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.meta.BuildVisibility;
 // Я такой крутой, писал секунды в тиках.... 4.9 Тиков))
-public class EkeriBlocks {
+public class ErekirBlocks {
     public static Block berylliumWallT1, berylliumWallT2, berylliumWallT3, berylliumWallT4, berylliumWallT5, berylliumWallT6;
 
     public static void load(){

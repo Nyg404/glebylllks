@@ -2,14 +2,14 @@ package io.github.nyg404;
 
 import arc.*;
 import arc.util.*;
-import io.github.nyg404.content.EkeriBlocks;
+import io.github.nyg404.content.ErekirBlocks;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-public class ExampleJavaMod extends Mod{
+public class ErekirMod extends Mod{
 
-    public ExampleJavaMod(){
+    public ErekirMod(){
         Log.info("Loaded ExampleJavaMod constructor.");
 
         //listen for game load event
@@ -28,7 +28,7 @@ public class ExampleJavaMod extends Mod{
 
     @Override
     public void loadContent(){
-        EkeriBlocks.load();
+        ErekirBlocks.load();
         Log.info("Loading some example content.");
     }
 

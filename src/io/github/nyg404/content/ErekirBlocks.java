@@ -1,5 +1,7 @@
 package io.github.nyg404.content;
 
+import arc.graphics.Color;
+import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -21,7 +23,13 @@ public class ErekirBlocks {
             hugeReinforcedWallMadeTungstenTir4,
             giantWallTungstenTir5,
             giantReinforcedWallMadeTungstenTir6;
-
+    public static Block
+            reinforcedCarbideWallTie1,           // тир 1
+            largeReinforcedCarbideWallTir2,      // тир 2
+            hugeWallOfCarbideTir3,               // тир 3
+            hugeReinforcedWallMadeCarbideTir4,   // тир 4
+            giantWallCarbideTir5,                // тир 5
+            giantReinforcedCarbideWallTir6;
     public static void load() {
 
         // ──────── Старые бериллиевые (не трогал) ────────
@@ -121,6 +129,83 @@ public class ErekirBlocks {
             size = 4;
             health = 4900;
             buildTime = 60f;  // 6,0 сек
+        }};
+        // Тир 1 — укреплённая карбидовая стена
+        reinforcedCarbideWallTie1 = new Wall("reinforced-carbide-wall-tie1"){{
+            requirements(Category.defense, BuildVisibility.shown,
+                    ItemStack.with(Items.carbide, 8, Items.surgeAlloy, 3));
+            size = 1;
+            health = 790;
+            buildTime = 36f;
+            lightningChance = 0.8f;
+            lightningDamage = 22f;
+            lightningLength = 17;
+            lightningColor = Color.valueOf("fffc5e"); // ← жёлтый теперь
+        }};
+
+// Тир 2
+        largeReinforcedCarbideWallTir2 = new Wall("large-reinforced-carbide-wall-tir2"){{
+            requirements(Category.defense, BuildVisibility.shown,
+                    ItemStack.with(Items.carbide, 19, Items.surgeAlloy, 9));
+            size = 2;
+            health = 2800;
+            buildTime = 40f;
+            lightningChance = 0.8f;
+            lightningDamage = 28f;
+            lightningLength = 20;
+            lightningColor = Color.valueOf("fffc5e"); // жёлтый
+        }};
+
+// Тир 3
+        hugeWallOfCarbideTir3 = new Wall("huge-wall-of-carbide-tir3"){{
+            requirements(Category.defense, BuildVisibility.shown,
+                    ItemStack.with(Items.carbide, 26, Items.surgeAlloy, 17));
+            size = 3;
+            health = 3090;
+            buildTime = 49f;
+            lightningChance = 0.8f;
+            lightningDamage = 34f;
+            lightningLength = 23;
+            lightningColor = Color.valueOf("fffcff5e"); // жёлтый
+        }};
+
+// Тир 4
+        hugeReinforcedWallMadeCarbideTir4 = new Wall("huge-reinforced-wall-made-carbide-tir4"){{
+            requirements(Category.defense, BuildVisibility.shown,
+                    ItemStack.with(Items.carbide, 35, Items.surgeAlloy, 20));
+            size = 3;
+            health = 4100;
+            buildTime = 59f;
+            lightningChance = 0.8f;
+            lightningDamage = 40f;
+            lightningLength = 26;
+            lightningColor = Color.valueOf("fffc5e"); // жёлтый
+        }};
+
+// Тир 5
+        giantWallCarbideTir5 = new Wall("giant-wall-carbide-tir5"){{
+            requirements(Category.defense, BuildVisibility.shown,
+                    ItemStack.with(Items.carbide, 40, Items.surgeAlloy, 34));
+            size = 4;
+            health = 4900;
+            buildTime = 60f;
+            lightningChance = 0.8f;
+            lightningDamage = 46f;
+            lightningLength = 28;
+            lightningColor = Color.valueOf("fffc5e"); // жёлтый
+        }};
+
+// Тир 6
+        giantReinforcedCarbideWallTir6 = new Wall("giant-reinforced-carbide-wall-tir6"){{
+            requirements(Category.defense, BuildVisibility.shown,
+                    ItemStack.with(Items.carbide, 61, Items.surgeAlloy, 40));
+            size = 4;
+            health = 5500;
+            buildTime = 68f;
+            lightningChance = 0.8f;
+            lightningDamage = 52f;
+            lightningLength = 30;
+            lightningColor = Color.valueOf("fffc5e"); // жёлтый
         }};
     }
 }

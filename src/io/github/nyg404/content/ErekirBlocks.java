@@ -86,7 +86,7 @@ public class ErekirBlocks {
                 berylliumWallT6 = new Wall("beryllium-wall-t6") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.beryllium, 200, Items.tungsten, 160));
+                                                ItemStack.with(Items.beryllium, 200, Items.tungsten, 150));
                                 size = 4;
                                 health = 4100;
                                 buildTime = 49f;
@@ -111,7 +111,7 @@ public class ErekirBlocks {
                 greatWallTungstenTir2 = new Wall("great-wall-tungsten-tir2") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.tungsten, 30));
+                                                ItemStack.with(Items.tungsten, 30, Items.phaseFabric, 10));
                                 size = 2;
                                 health = 2500;
                                 buildTime = 35f;
@@ -170,7 +170,7 @@ public class ErekirBlocks {
                 reinforcedCarbideWallTie1 = new Wall("reinforced-carbide-wall-tie1") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 8, Items.phaseFabric, 2));
+                                                ItemStack.with(Items.carbide, 8, Items.phaseFabric, 3));
                                 size = 1;
                                 health = 790;
                                 buildTime = 36f;
@@ -184,7 +184,7 @@ public class ErekirBlocks {
                 largeReinforcedCarbideWallTir2 = new Wall("large-reinforced-carbide-wall-tir2") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 19));
+                                                ItemStack.with(Items.carbide, 19, Items.phaseFabric, 9));
                                 size = 2;
                                 health = 2800;
                                 buildTime = 40f;
@@ -204,7 +204,7 @@ public class ErekirBlocks {
                 hugeReinforcedWallMadeCarbideTir4 = new Wall("huge-reinforced-wall-made-carbide-tir4") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 35, Items.phaseFabric, 25));
+                                                ItemStack.with(Items.carbide, 35, Items.phaseFabric, 20));
                                 size = 3;
                                 health = 4100;
                                 buildTime = 59f;

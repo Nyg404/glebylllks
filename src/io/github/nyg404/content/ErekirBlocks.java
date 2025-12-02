@@ -15,7 +15,7 @@ public class ErekirBlocks {
         public static Block berylliumWallT1, berylliumWallT2, berylliumWallT3,
                         berylliumWallT4, berylliumWallT5, berylliumWallT6;
 
-        // === Новые вольфрамовые + карбидные стены ===
+        // === Новые вольфрамовые, карбидные стены ===
         public static Block reinforcedTungstenWallTir1,
                         hugeWallTungstenTir3,
                         greatWallTungstenTir2,
@@ -28,7 +28,7 @@ public class ErekirBlocks {
                         hugeReinforcedWallMadeCarbideTir4,
                         giantWallCarbideTir5,
                         giantReinforcedCarbideWallTir6;
-        public static Block door;
+        public static Block door, door1, door2;
 
         public static void load() {
 
@@ -227,7 +227,7 @@ public class ErekirBlocks {
 
                 giantReinforcedCarbideWallTir6 = new Wall("giant-reinforced-carbide-wall-tir6") {
                         {
-                                requirements(Category.defense, BuildVisibility.shown,
+                                requirements(Category.power, BuildVisibility.shown,
                                                 ItemStack.with(Items.carbide, 61, Items.phaseFabric, 40));
                                 size = 4;
                                 health = 5500;
@@ -241,8 +241,24 @@ public class ErekirBlocks {
 
                 door = new Door("tungsten-wall-tir1") {
                         {
-                                requirements(Category.defense, ItemStack.with(Items.beryllium, 2222));
-                                health = 500;
+                                requirements(Category.defense, ItemStack.with(Items.tungsten, 6, Items.silicon, 4));
+                                buildTime = 7f;
+                                health = 620;
+                        }
+                };
+                door1 = new Door("wall-tungsten-tir3") {
+                        {
+                                requirements(Category.defense, ItemStack.with(Items.tungsten, 10, Items.silicon, 7));
+                                buildTime = 9f;
+                                health = 2300;
+                        }
+                };
+                door2 = new Door("tungsten-wall-tir6") {
+                        {
+                                requirements(Category.defense, ItemStack.with(Items.tungsten, 20, Items.silicon, 10));
+                                health = 2800;
+                                buildTime = 10f;
+
                         }
                 };
         }

@@ -56,7 +56,7 @@ public class ErekirBlocks {
                 berylliumWallT3 = new Wall("beryllium-wall-t3") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.beryllium, 54, Items.tungsten, 30));
+                                                ItemStack.with(Items.beryllium, 54));
                                 size = 3;
                                 health = 2900;
                                 buildTime = 30f;
@@ -76,7 +76,7 @@ public class ErekirBlocks {
                 berylliumWallT5 = new Wall("beryllium-wall-t5") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.beryllium, 140, Items.tungsten, 100));
+                                                ItemStack.with(Items.beryllium, 140));
                                 size = 4;
                                 health = 3900;
                                 buildTime = 40f;
@@ -97,7 +97,7 @@ public class ErekirBlocks {
                 reinforcedTungstenWallTir1 = new Wall("reinforced-tungsten-wall-tir1") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.tungsten, 10, Items.phaseFabric, 2));
+                                                ItemStack.with(Items.tungsten, 10, Items.surgeAlloy, 2));
                                 size = 1;
                                 health = 700;
                                 buildTime = 21f;
@@ -111,7 +111,7 @@ public class ErekirBlocks {
                 greatWallTungstenTir2 = new Wall("great-wall-tungsten-tir2") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.tungsten, 30, Items.phaseFabric, 10));
+                                                ItemStack.with(Items.tungsten, 30, Items.surgeAlloy, 10));
                                 size = 2;
                                 health = 2500;
                                 buildTime = 35f;
@@ -131,7 +131,7 @@ public class ErekirBlocks {
                 hugeReinforcedWallMadeTungstenTir4 = new Wall("huge-reinforced-wall-made-tungsten-tir4") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.tungsten, 80, Items.phaseFabric, 60));
+                                                ItemStack.with(Items.tungsten, 80, Items.surgeAlloy, 60));
                                 size = 3;
                                 health = 3900;
                                 buildTime = 49f;
@@ -155,7 +155,7 @@ public class ErekirBlocks {
                 giantReinforcedWallMadeTungstenTir6 = new Wall("giant-reinforced-wall-made-tungsten-tir6") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.tungsten, 150, Items.phaseFabric, 100));
+                                                ItemStack.with(Items.tungsten, 150, Items.surgeAlloy, 100));
                                 size = 4;
                                 health = 4900;
                                 buildTime = 60f;
@@ -170,7 +170,7 @@ public class ErekirBlocks {
                 reinforcedCarbideWallTie1 = new Wall("reinforced-carbide-wall-tie1") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 8, Items.phaseFabric, 3));
+                                                ItemStack.with(Items.carbide, 8, Items.surgeAlloy, 3));
                                 size = 1;
                                 health = 790;
                                 buildTime = 36f;
@@ -184,7 +184,7 @@ public class ErekirBlocks {
                 largeReinforcedCarbideWallTir2 = new Wall("large-reinforced-carbide-wall-tir2") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 19, Items.phaseFabric, 9));
+                                                ItemStack.with(Items.carbide, 19, Items.surgeAlloy, 9));
                                 size = 2;
                                 health = 2800;
                                 buildTime = 40f;
@@ -204,7 +204,7 @@ public class ErekirBlocks {
                 hugeReinforcedWallMadeCarbideTir4 = new Wall("huge-reinforced-wall-made-carbide-tir4") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 35, Items.phaseFabric, 20));
+                                                ItemStack.with(Items.carbide, 35, Items.surgeAlloy, 20));
                                 size = 3;
                                 health = 4100;
                                 buildTime = 59f;
@@ -228,7 +228,7 @@ public class ErekirBlocks {
                 giantReinforcedCarbideWallTir6 = new Wall("giant-reinforced-carbide-wall-tir6") {
                         {
                                 requirements(Category.power, BuildVisibility.shown,
-                                                ItemStack.with(Items.carbide, 61, Items.phaseFabric, 40));
+                                                ItemStack.with(Items.carbide, 61, Items.surgeAlloy, 40));
                                 size = 4;
                                 health = 5500;
                                 buildTime = 68f;
@@ -250,13 +250,15 @@ public class ErekirBlocks {
                         {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 10, Items.silicon, 7));
                                 buildTime = 9f;
+                                size = 3;
                                 health = 2300;
                         }
                 };
-                door2 = new Door("tungsten-wall-tir6") {
+                door2 = new Door("tungsten-tir6") {
                         {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 20, Items.silicon, 10));
                                 health = 2800;
+                                size = 4;
                                 buildTime = 10f;
 
                         }

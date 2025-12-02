@@ -1,8 +1,8 @@
 package io.github.nyg404.content;
+
 import arc.graphics.Color;
 import mindustry.content.Items;
 import mindustry.type.Category;
-import mindustry.type.Item;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.Door;
@@ -11,219 +11,239 @@ import mindustry.world.meta.BuildVisibility;
 
 public class ErekirBlocks {
 
-    // === Старые бериллиевые стены ===
-    public static Block berylliumWallT1, berylliumWallT2, berylliumWallT3,
-            berylliumWallT4, berylliumWallT5, berylliumWallT6;
+        // === Старые бериллиевые стены ===
+        public static Block berylliumWallT1, berylliumWallT2, berylliumWallT3,
+                        berylliumWallT4, berylliumWallT5, berylliumWallT6;
 
-    // === Новые вольфрамовые + карбидные стены ===
-    public static Block
-            reinforcedTungstenWallTir1,
-            hugeWallTungstenTir3,
-            greatWallTungstenTir2,
-            hugeReinforcedWallMadeTungstenTir4,
-            giantWallTungstenTir5,
-            giantReinforcedWallMadeTungstenTir6;
-    public static Block
-            reinforcedCarbideWallTie1,
-            largeReinforcedCarbideWallTir2,
-            hugeWallOfCarbideTir3,
-            hugeReinforcedWallMadeCarbideTir4,
-            giantWallCarbideTir5,
-            giantReinforcedCarbideWallTir6;
-     public static Block door;
+        // === Новые вольфрамовые + карбидные стены ===
+        public static Block reinforcedTungstenWallTir1,
+                        hugeWallTungstenTir3,
+                        greatWallTungstenTir2,
+                        hugeReinforcedWallMadeTungstenTir4,
+                        giantWallTungstenTir5,
+                        giantReinforcedWallMadeTungstenTir6;
+        public static Block reinforcedCarbideWallTie1,
+                        largeReinforcedCarbideWallTir2,
+                        hugeWallOfCarbideTir3,
+                        hugeReinforcedWallMadeCarbideTir4,
+                        giantWallCarbideTir5,
+                        giantReinforcedCarbideWallTir6;
+        public static Block door;
 
+        public static void load() {
 
-    public static void load() {
+                // ──────── Старые бериллиевые ────────
+                berylliumWallT1 = new Wall("beryllium-wall-t1") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.beryllium, 10, Items.tungsten, 2));
+                                size = 1;
+                                health = 630;
+                                buildTime = 10f;
+                        }
+                };
 
-        // ──────── Старые бериллиевые ────────
-        berylliumWallT1 = new Wall("beryllium-wall-t1"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.beryllium, 10, Items.tungsten, 2));
-            size = 1;
-            health = 630;
-           buildTime = 10f;
-        }};
+                berylliumWallT2 = new Wall("beryllium-wall-t2") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.beryllium, 30, Items.tungsten, 10));
+                                size = 2;
+                                health = 2294;
+                                buildTime = 28f;
+                        }
+                };
 
-        berylliumWallT2 = new Wall("beryllium-wall-t2"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.beryllium, 30, Items.tungsten, 10));
-            size = 2;
-            health = 2294;
-           buildTime = 28f;
-        }};
+                berylliumWallT3 = new Wall("beryllium-wall-t3") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.beryllium, 54, Items.tungsten, 30));
+                                size = 3;
+                                health = 2900;
+                                buildTime = 30f;
+                        }
+                };
 
-        berylliumWallT3 = new Wall("beryllium-wall-t3"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.beryllium, 54, Items.tungsten, 30));
-            size = 3;
-            health = 2900;
-           buildTime = 30f;
-        }};
+                berylliumWallT4 = new Wall("beryllium-wall-t4") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.beryllium, 90, Items.tungsten, 60));
+                                size = 3;
+                                health = 3500;
+                                buildTime = 36f;
+                        }
+                };
 
-        berylliumWallT4 = new Wall("beryllium-wall-t4"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.beryllium, 90, Items.tungsten, 60));
-            size = 3;
-            health = 3500;
-           buildTime = 36f;
-        }};
+                berylliumWallT5 = new Wall("beryllium-wall-t5") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.beryllium, 140, Items.tungsten, 100));
+                                size = 4;
+                                health = 3900;
+                                buildTime = 40f;
+                        }
+                };
 
-        berylliumWallT5 = new Wall("beryllium-wall-t5"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.beryllium, 140, Items.tungsten, 100));
-            size = 4;
-            health = 3900;
-           buildTime = 40f;
-        }};
+                berylliumWallT6 = new Wall("beryllium-wall-t6") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.beryllium, 200, Items.tungsten, 160));
+                                size = 4;
+                                health = 4100;
+                                buildTime = 49f;
+                        }
+                };
 
-        berylliumWallT6 = new Wall("beryllium-wall-t6"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.beryllium, 200, Items.tungsten, 160));
-            size = 4;
-            health = 4100;
-           buildTime = 49f;
-        }};
+                // ──────── Вольфрамовые стены ────────
+                reinforcedTungstenWallTir1 = new Wall("reinforced-tungsten-wall-tir1") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.tungsten, 10, Items.phaseFabric, 2));
+                                size = 1;
+                                health = 700;
+                                buildTime = 21f;
+                                lightningChance = 0.1f;
+                                lightningDamage = 15f;
+                                lightningLength = 10;
+                                lightningColor = Color.valueOf("a0a0a0");
+                        }
+                };
 
-        // ──────── Вольфрамовые стены (с исправлениями) ────────
-        reinforcedTungstenWallTir1 = new Wall("reinforced-tungsten-wall-tir1"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.tungsten, 10, Items.carbide, 2));
-            size = 1;
-            health = 700;
-           buildTime = 21f;
-            // Уровни 1,4,6: шанс молнии 10%
-            lightningChance = 0.1f;
-            lightningDamage = 15f;
-            lightningLength = 10;
-            lightningColor = Color.valueOf("a0a0a0");
-        }};
+                greatWallTungstenTir2 = new Wall("great-wall-tungsten-tir2") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.tungsten, 30));
+                                size = 2;
+                                health = 2500;
+                                buildTime = 35f;
+                        }
+                };
 
-        // Исправлены уровни и порядок
-        greatWallTungstenTir2 = new Wall("great-wall-tungsten-tir2"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.tungsten, 30, Items.carbide, 10)); // Исправлено количество
-            size = 2;
-            health = 2500;
-           buildTime = 35f;
-            // Уровни 2,3,5: без молнии
-        }};
+                hugeWallTungstenTir3 = new Wall("huge-wall-tungsten-tir3") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.tungsten, 60));
+                                size = 3;
+                                health = 3100;
+                                buildTime = 40f;
+                        }
+                };
 
-        hugeWallTungstenTir3 = new Wall("huge-wall-tungsten-tir3"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.tungsten, 60, Items.carbide, 30)); // Исправлено количество
-            size = 3;
-            health = 3100;
-           buildTime = 40f;
-            // Уровни 2,3,5: без молнии
-        }};
+                hugeReinforcedWallMadeTungstenTir4 = new Wall("huge-reinforced-wall-made-tungsten-tir4") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.tungsten, 80, Items.phaseFabric, 60));
+                                size = 3;
+                                health = 3900;
+                                buildTime = 49f;
+                                lightningChance = 0.1f;
+                                lightningDamage = 20f;
+                                lightningLength = 15;
+                                lightningColor = Color.valueOf("a0a0a0");
+                        }
+                };
 
-        hugeReinforcedWallMadeTungstenTir4 = new Wall("huge-reinforced-wall-made-tungsten-tir4"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.tungsten, 80, Items.carbide, 60));
-            size = 3;
-            health = 3900;
-           buildTime = 49f;
-            // Уровни 1,4,6: шанс молнии 10%
-            lightningChance = 0.1f;
-            lightningDamage = 20f;
-            lightningLength = 15;
-            lightningColor = Color.valueOf("a0a0a0");
-        }};
+                giantWallTungstenTir5 = new Wall("giant-wall-tungsten-tir5") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.tungsten, 100));
+                                size = 4;
+                                health = 4300;
+                                buildTime = 54f;
+                        }
+                };
 
-        giantWallTungstenTir5 = new Wall("giant-wall-tungsten-tir5"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.tungsten, 100, Items.carbide, 80));
-            size = 4;
-            health = 4300;
-           buildTime = 54f;
-            // Уровни 2,3,5: без молнии
-        }};
+                giantReinforcedWallMadeTungstenTir6 = new Wall("giant-reinforced-wall-made-tungsten-tir6") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.tungsten, 150, Items.phaseFabric, 100));
+                                size = 4;
+                                health = 4900;
+                                buildTime = 60f;
+                                lightningChance = 0.1f;
+                                lightningDamage = 25f;
+                                lightningLength = 18;
+                                lightningColor = Color.valueOf("a0a0a0");
+                        }
+                };
 
-        giantReinforcedWallMadeTungstenTir6 = new Wall("giant-reinforced-wall-made-tungsten-tir6"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.tungsten, 150, Items.carbide, 100));
-            size = 4;
-            health = 4900;
-           buildTime = 60f;
-            // Уровни 1,4,6: шанс молнии 10%
-            lightningChance = 0.1f;
-            lightningDamage = 25f;
-            lightningLength = 18;
-            lightningColor = Color.valueOf("a0a0a0");
-        }};
+                // ──────── Карбидные стены ────────
+                reinforcedCarbideWallTie1 = new Wall("reinforced-carbide-wall-tie1") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.carbide, 8, Items.phaseFabric, 2));
+                                size = 1;
+                                health = 790;
+                                buildTime = 36f;
+                                lightningChance = 0.3f;
+                                lightningDamage = 22f;
+                                lightningLength = 17;
+                                lightningColor = Color.valueOf("fffc5e");
+                        }
+                };
 
-        // ──────── Карбидные стены (с исправлениями) ────────
-        reinforcedCarbideWallTie1 = new Wall("reinforced-carbide-wall-tie1"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.carbide, 8));
-            size = 1;
-            health = 790;
-           buildTime = 36f;
-            // Уровни 1,4,6: шанс молнии 30%
-            lightningChance = 0.3f;
-            lightningDamage = 22f;
-            lightningLength = 17;
-            lightningColor = Color.valueOf("fffc5e");
-        }};
+                largeReinforcedCarbideWallTir2 = new Wall("large-reinforced-carbide-wall-tir2") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.carbide, 19));
+                                size = 2;
+                                health = 2800;
+                                buildTime = 40f;
+                        }
+                };
 
-        largeReinforcedCarbideWallTir2 = new Wall("large-reinforced-carbide-wall-tir2"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.carbide, 19));
-            size = 2;
-            health = 2800;
-           buildTime = 40f;
-            // Уровни 2,3,5: без молнии
-        }};
+                hugeWallOfCarbideTir3 = new Wall("huge-wall-of-carbide-tir3") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.carbide, 26));
+                                size = 3;
+                                health = 3090;
+                                buildTime = 49f;
+                        }
+                };
 
-        hugeWallOfCarbideTir3 = new Wall("huge-wall-of-carbide-tir3"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.carbide, 26));
-            size = 3;
-            health = 3090;
-           buildTime = 49f;
-            // Уровни 2,3,5: без молнии
-        }};
+                hugeReinforcedWallMadeCarbideTir4 = new Wall("huge-reinforced-wall-made-carbide-tir4") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.carbide, 35, Items.phaseFabric, 25));
+                                size = 3;
+                                health = 4100;
+                                buildTime = 59f;
+                                lightningChance = 0.3f;
+                                lightningDamage = 40f;
+                                lightningLength = 26;
+                                lightningColor = Color.valueOf("fffc5e");
+                        }
+                };
 
-        hugeReinforcedWallMadeCarbideTir4 = new Wall("huge-reinforced-wall-made-carbide-tir4"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.carbide, 35));
-            size = 3;
-            health = 4100;
-           buildTime = 59f;
-            // Уровни 1,4,6: шанс молнии 30%
-            lightningChance = 0.3f;
-            lightningDamage = 40f;
-            lightningLength = 26;
-            lightningColor = Color.valueOf("fffc5e");
-        }};
+                giantWallCarbideTir5 = new Wall("giant-wall-carbide-tir5") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.carbide, 40));
+                                size = 4;
+                                health = 4900;
+                                buildTime = 60f;
+                        }
+                };
 
-        giantWallCarbideTir5 = new Wall("giant-wall-carbide-tir5"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.carbide, 40));
-            size = 4;
-            health = 4900;
-           buildTime = 60f;
-            // Уровни 2,3,5: без молнии
-        }};
+                giantReinforcedCarbideWallTir6 = new Wall("giant-reinforced-carbide-wall-tir6") {
+                        {
+                                requirements(Category.defense, BuildVisibility.shown,
+                                                ItemStack.with(Items.carbide, 61, Items.phaseFabric, 40));
+                                size = 4;
+                                health = 5500;
+                                buildTime = 68f;
+                                lightningChance = 0.3f;
+                                lightningDamage = 52f;
+                                lightningLength = 30;
+                                lightningColor = Color.valueOf("fffc5e");
+                        }
+                };
 
-        giantReinforcedCarbideWallTir6 = new Wall("giant-reinforced-carbide-wall-tir6"){{
-            requirements(Category.defense, BuildVisibility.shown,
-                    ItemStack.with(Items.carbide, 61));
-            size = 4;
-            health = 5500;
-           buildTime = 68f;
-            // Уровни 1,4,6: шанс молнии 30%
-            lightningChance = 0.3f;
-            lightningDamage = 52f;
-            lightningLength = 30;
-            lightningColor = Color.valueOf("fffc5e");
-        }};
-
-
-        door = new Door("tungsten-wall-tir1"){{
-                requirements(Category.defense, ItemStack.with(Items.beryllium, 2222));
-                health = 500;
-        }};
-        
-    }
+                door = new Door("tungsten-wall-tir1") {
+                        {
+                                requirements(Category.defense, ItemStack.with(Items.beryllium, 2222));
+                                health = 500;
+                        }
+                };
+        }
 }

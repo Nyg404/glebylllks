@@ -244,6 +244,7 @@ public class ErekirBlocks {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 6, Items.silicon, 4));
                                 buildTime = 7f;
                                 health = 620;
+                                update = true;
                         }
                 };
                 door1 = new Door("wall-tungsten-tir3") {
@@ -252,6 +253,7 @@ public class ErekirBlocks {
                                 buildTime = 9f;
                                 size = 3;
                                 health = 2300;
+                                update = true;
                         }
                 };
                 door2 = new Door("tungsten-tir6") {
@@ -259,6 +261,7 @@ public class ErekirBlocks {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 20, Items.silicon, 10));
                                 health = 2800;
                                 size = 4;
+                                update = true;
                                 buildTime = 10f;
 
                         }

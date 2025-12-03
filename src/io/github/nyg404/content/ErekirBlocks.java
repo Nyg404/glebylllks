@@ -239,6 +239,7 @@ public class ErekirBlocks {
                         }
                 };
 
+
                 door = new Door("tungsten-wall-tir1") {
                         {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 6, Items.silicon, 4));

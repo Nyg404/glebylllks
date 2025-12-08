@@ -3,9 +3,11 @@ package io.github.nyg404.content;
 import arc.graphics.Color;
 import mindustry.content.Items;
 import mindustry.type.Category;
+import mindustry.type.Item;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.Door;
+import mindustry.world.blocks.defense.ShieldWall;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.meta.BuildVisibility;
 
@@ -28,11 +30,12 @@ public class ErekirBlocks {
                         hugeReinforcedWallMadeCarbideTir4,
                         giantWallCarbideTir5,
                         giantReinforcedCarbideWallTir6;
+        private static Block scrapWallTir1, scrapWallTir2, scrapWallTir3;
         public static Block door, door1, door2;
 
         public static void load() {
 
-                // ──────── Старые бериллиевые ────────
+               
                 berylliumWallT1 = new Wall("beryllium-wall-t1") {
                         {
                                 requirements(Category.defense, BuildVisibility.shown,
@@ -227,7 +230,7 @@ public class ErekirBlocks {
 
                 giantReinforcedCarbideWallTir6 = new Wall("giant-reinforced-carbide-wall-tir6") {
                         {
-                                requirements(Category.power, BuildVisibility.shown,
+                                requirements(Category.defense, BuildVisibility.shown,
                                                 ItemStack.with(Items.carbide, 61, Items.surgeAlloy, 40));
                                 size = 4;
                                 health = 5500;
@@ -268,5 +271,61 @@ public class ErekirBlocks {
                         }
 
                 };
+
+            scrapWallTir1= new ShieldWall("scrap-wall-tir1") {
+                {
+                    requirements(Category.defense, BuildVisibility.shown,
+                            ItemStack.with(Items.beryllium, 8, Items.phaseFabric, 16, Items.surgeAlloy, 8));
+                    consumePower(1f / 60f);
+                    size = 1;
+                    health = 4090;
+                    buildTime = 40f;
+
+                    armor = 21f;
+                    chanceDeflect = 2;
+
+                    outputsPower = false;
+                    hasPower = true;
+                    consumesPower = true;
+                    conductivePower = true;
+                }
+            };
+            scrapWallTir2= new ShieldWall("scrap-wall-tir3") {
+                {
+                    requirements(Category.defense, BuildVisibility.shown,
+                            ItemStack.with(Items.beryllium, 19, Items.phaseFabric, 40, Items.surgeAlloy, 19));
+                    consumePower(10f / 60f);
+                    size = 3;
+                    health = 4090;
+                    buildTime = 61f;
+
+                    armor = 1200f;
+                    chanceDeflect = 16;
+
+                    outputsPower = false;
+                    hasPower = true;
+                    consumesPower = true;
+                    conductivePower = true;
+                }
+            };
+            scrapWallTir3= new ShieldWall("scrap-wall-tir4") {
+                {
+                    requirements(Category.defense, BuildVisibility.shown,
+                            ItemStack.with(Items.beryllium, 60, Items.phaseFabric, 80, Items.surgeAlloy, 60));
+                    consumePower(30f / 60f);
+                    size = 4;
+                    health = 4090;
+                    buildTime = 80f;
+
+                    armor = 2000f;
+                    chanceDeflect = 20;
+
+                    outputsPower = false;
+                    hasPower = true;
+                    consumesPower = true;
+                    conductivePower = true;
+                }
+            };
+
         }
 }

@@ -244,7 +244,7 @@ public class ErekirBlocks {
                 };
 
 
-                door = new Door("tungsten-wall-tir1") {
+                door = new AutoDoor("tungsten-wall-tir1") {
                         {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 6, Items.silicon, 4));
                                 buildTime = 7f;
@@ -252,7 +252,7 @@ public class ErekirBlocks {
                                 update = true;
                         }
                 };
-                door1 = new Door("wall-tungsten-tir3") {
+                door1 = new AutoDoor("wall-tungsten-tir3") {
                         {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 10, Items.silicon, 7));
                                 buildTime = 9f;

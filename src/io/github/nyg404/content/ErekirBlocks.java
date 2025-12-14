@@ -6,6 +6,7 @@ import mindustry.type.Category;
 import mindustry.type.Item;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
+import mindustry.world.blocks.defense.AutoDoor;
 import mindustry.world.blocks.defense.Door;
 import mindustry.world.blocks.defense.ShieldWall;
 import mindustry.world.blocks.defense.Wall;
@@ -260,7 +261,7 @@ public class ErekirBlocks {
                                 update = true;
                         }
                 };
-                door2 = new Door("tungsten-tir6") {
+                door2 = new AutoDoor("tungsten-tir6") {
                         {
                                 requirements(Category.defense, ItemStack.with(Items.tungsten, 20, Items.silicon, 10));
                                 health = 2800;

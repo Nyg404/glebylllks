@@ -31,7 +31,7 @@ public class ErekirBlocks {
                         hugeReinforcedWallMadeCarbideTir4,
                         giantWallCarbideTir5,
                         giantReinforcedCarbideWallTir6;
-        private static Block scrapWallTir1, scrapWallTir2, scrapWallTir3;
+        public static Block scrapWallTir1, scrapWallTir2, scrapWallTir3;
         public static Block door, door1, door2;
 
         public static void load() {

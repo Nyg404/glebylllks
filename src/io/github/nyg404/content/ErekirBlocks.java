@@ -297,7 +297,7 @@ public class ErekirBlocks {
                             ItemStack.with(Items.beryllium, 19, Items.phaseFabric, 40, Items.surgeAlloy, 19));
                     consumePower(10f / 60f);
                     size = 3;
-                    health = 4090;
+                    health = 4500;
                     buildTime = 61f;
 
                     armor = 1200f;
@@ -315,7 +315,7 @@ public class ErekirBlocks {
                             ItemStack.with(Items.beryllium, 60, Items.phaseFabric, 80, Items.surgeAlloy, 60));
                     consumePower(30f / 60f);
                     size = 4;
-                    health = 4090;
+                    health = 5000;
                     buildTime = 80f;
 
                     armor = 2000f;
